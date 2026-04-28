@@ -25,3 +25,5 @@ plt.legend()
 plt.savefig("ex1.3.png")
 plt.show()
 
+df.to_csv("dataset.tsv", sep="\t", index=False)
+
