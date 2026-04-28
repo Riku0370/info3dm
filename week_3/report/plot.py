@@ -1,6 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
 import dataset1
+import pandas as pd
 
 # 真の関数
 x = np.linspace(-1, 1, 100)
@@ -27,3 +28,5 @@ plt.show()
 
 df.to_csv("dataset.tsv", sep="\t", index=False)
 
+df = pd.read_csv("dataset.tsv", sep="\t")
+print(df)
