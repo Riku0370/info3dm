@@ -1,4 +1,5 @@
 import numpy as np
+import random
 import dataset1
 # フォント設定
 import matplotlib.pyplot as plt
