@@ -10,8 +10,18 @@ plt.plot(x, y, label="true_function")
 
 # 観測点
 df = dataset1.create_dataset()
-plt.scatter(df["観測点"], df["真値"], label="sample", s=30)
 
+mean = 0
+variance = 2
+sigma = np.sqrt(variance)
+size = len(df)
+
+noise = np.random.normal(mean, sigma, size)
+
+noise = noise / 2
+df["観測値"] = df["真値"] + noise
+plt.scatter(df["観測点"], df["観測値"], label="observed", color="red")
 plt.legend()
-plt.savefig("ex1.2.png")
+plt.savefig("ex1.3.png")
 plt.show()
+

@@ -1,6 +1,5 @@
 # フォント設定
 import numpy as np
-import random
 import pandas as pd
 
 #　真の関数
